@@ -1,6 +1,14 @@
 $font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+$color-green: #00ff00;
+$color-dark: #212529;
+$color-grey: #978e8e;
+
 body {
   font: 100% $font-stack;
-  color: $primary-color;
+  color: $color-green;
+}
+
+nav {
+  color: $color-grey;
+  background-color: #0f0f0f;
 }
