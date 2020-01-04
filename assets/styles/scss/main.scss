@@ -1,14 +1,206 @@
-$font-stack: Helvetica, sans-serif;
 $color-green: #00ff00;
 $color-dark: #212529;
+$color-darker: #0f0f0f;
 $color-grey: #978e8e;
 
-body {
-  font: 100% $font-stack;
-  color: $color-green;
+@font-face {
+  font-family: Montserrat-Light;
+  src: url(../../fonts/Montseratt/montserrat-light_0.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(../../fonts/Montseratt/Montserrat-Regular.otf);
+  src: url(../../fonts/Montseratt/montserrat-regular_2.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url(../../fonts/Montseratt/montserrat-bold_0.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+$razer-font-regular: "Montserrat-Regular";
+$razer-font-bold: "Montserrat-Bold";
+$razer-font-light: "Montserrat-Light";
+
+* {
+  font-family: $razer-font-regular;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 nav {
+  background-color: $color-darker;
+}
+
+ul {
+  margin: 0;
+  height: 60px;
+  list-style-type: none;
+}
+
+a {
   color: $color-grey;
-  background-color: #0f0f0f;
+  text-decoration: none;
+  &:hover {
+    color: $color-green;
+    text-decoration: none;
+  }
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+.menu {
+  li {
+    &.menu-item {
+      display: none;
+    }
+  }
+}
+
+#mobile-menu {
+  .menu {
+    li {
+      &.menu-item {
+        display: block;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+      }
+      a {
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.logo {
+  margin-right: auto;
+  img {
+    height: 18px;
+  }
+  a {
+    font-size: 20px;
+  }
+}
+
+%razer-button {
+  background-color: $color-green;
+  border: none;
+  border-radius: 20px;
+  height: 42px;
+  padding: 0px 45px;
+  cursor: pointer;
+  box-shadow: 8px 8px 16px 0px rgba(64, 69, 73, 0.1);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: $razer-font-bold;
+  color: $color-darker;
+  font-size: 11px;
+}
+
+.cta-button {
+  @extend %razer-button;
+  width: 100%;
+  height: 55px;
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.overlay-header {
+  height: 60px;
+  color: $color-grey;
+  margin-bottom: 20px;
+  .overlay-title {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: $razer-font-bold;
+    font-size: 18px;
+  }
+  .overlay-close {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+}
+
+#mobile-menu {
+  background-color: #000;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  ul {
+    height: 72px;
+  }
+  .menu {
+    li {
+      &.menu-item {
+        padding-left: 20px;
+        padding-right: 20px;
+        display: block;
+      }
+      a {
+        font-size: 11px;
+        text-transform: uppercase;
+        font-family: $razer-font-bold;
+      }
+      &:nth-last-child(2) {
+        padding-right: 0;
+      }
+    }
+    .logo {
+      img {
+        height: 26px;
+      }
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .cta-button {
+    width: auto;
+    height: 42px;
+    border-radius: 20px;
+    font-size: 11px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }

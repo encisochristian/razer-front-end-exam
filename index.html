@@ -16,15 +16,60 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="assets/styles/css/main.css">
+    <link rel="stylesheet" href="assets/styles/css/main.css" />
 
     <title>Razer Front-End Exam</title>
   </head>
   <body>
     <nav>
-      <div class="container">Link</div>
+      <div class="container">
+        <ul
+          class="menu d-flex flex-wrap justify-content-end align-items-center"
+        >
+          <li class="logo">
+            <img src="assets/images/Desktop/SVG/wordmark.svg" />
+          </li>
+          <li class="menu-item" onclick="changeOverlayMenuTitle('Products')">
+            <a href="#">Products</a>
+          </li>
+          <li class="menu-item" onclick="changeOverlayMenuTitle('About')">
+            <a href="#">About</a>
+          </li>
+          <li class="menu-item" onclick="changeOverlayMenuTitle('Community')">
+            <a href="#">Community</a>
+          </li>
+          <li class="menu-item" onclick="changeOverlayMenuTitle('Contact Us')">
+            <a href="#">Contact Us</a>
+          </li>
+          <li class="menu-item">
+            <button class="cta-button">Buy Now</button>
+          </li>
+          <li class="toggle d-lg-none" onclick="toggleOverlayMenu(1)">
+            <img src="assets/images/Mobile/1.png" alt="Menu" />
+          </li>
+        </ul>
+      </div>
     </nav>
 
+    <div id="mobile-menu" class="overlay">
+      <div
+        class="overlay-header container d-flex justify-content-between align-items-center"
+      >
+        <p class="overlay-title">Menu</p>
+        <p class="overlay-close" onclick="toggleOverlayMenu(0)">&#10006;</p>
+      </div>
+      <div class="overlay-content container">
+        <ul class="menu d-flex flex-wrap align-items-center">
+          <!-- This will be populated when the page loads -->
+        </ul>
+      </div>
+    </div>
+
+    <main>
+      <a href="#">Just a link</a>
+    </main>
+
+    <script src="assets/js/main.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
