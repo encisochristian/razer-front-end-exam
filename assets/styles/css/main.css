@@ -25,32 +25,39 @@ nav {
 
 ul {
   margin: 0;
-  height: 60px;
   list-style-type: none; }
 
 a {
   color: #978e8e;
   text-decoration: none; }
   a:hover {
-    color: #00ff00;
+    color: #978e8e;
     text-decoration: none; }
 
 .toggle {
   cursor: pointer; }
 
-.menu li.menu-item {
-  display: none; }
+.desktop-menu ul {
+  height: 60px; }
+  .desktop-menu ul li.menu-item {
+    display: none; }
 
-#mobile-menu .menu li.menu-item {
-  display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  width: 100%; }
-#mobile-menu .menu li a {
-  font-size: 18px;
-  text-transform: uppercase; }
-#mobile-menu .menu li:last-child {
-  margin-top: 20px; }
+#mobile-menu {
+  background-color: #000; }
+  #mobile-menu ul li.menu-item {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%; }
+  #mobile-menu ul li a {
+    display: block;
+    font-size: 18px;
+    color: rgba(151, 142, 142, 0.7);
+    text-transform: uppercase; }
+    #mobile-menu ul li a:hover {
+      color: #00ff00; }
+  #mobile-menu ul li:last-child {
+    margin-top: 20px; }
 
 .logo {
   margin-right: auto; }
@@ -107,29 +114,24 @@ a {
     font-size: 24px;
     font-weight: bolder; }
 
-#mobile-menu {
-  background-color: #000; }
-
 @media (min-width: 992px) {
-  ul {
+  .desktop-menu ul {
     height: 72px; }
-
-  .menu li.menu-item {
-    padding-left: 20px;
-    padding-right: 20px;
-    display: block; }
-  .menu li a {
-    font-size: 11px;
-    text-transform: uppercase;
-    font-family: "Montserrat-Bold"; }
-  .menu li:nth-last-child(2) {
-    padding-right: 0; }
-  .menu .logo img {
+    .desktop-menu ul li.menu-item {
+      padding-left: 20px;
+      padding-right: 20px;
+      display: block; }
+    .desktop-menu ul li a {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-family: "Montserrat-Bold"; }
+    .desktop-menu ul li:nth-last-child(2) {
+      padding-right: 0; }
+  .desktop-menu .logo img {
     height: 26px; }
-  .menu .logo a {
+  .desktop-menu .logo a {
     font-size: 20px; }
-
-  .cta-button {
+  .desktop-menu .cta-button {
     width: auto;
     height: 42px;
     border-radius: 20px;
