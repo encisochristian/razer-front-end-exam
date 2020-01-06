@@ -57,9 +57,12 @@ a {
     text-transform: uppercase; }
     #mobile-menu ul li a:hover {
       color: #00ff00; }
+      #mobile-menu ul li a:hover img.razer-arrow-icon {
+        content: url("../../images/Desktop/SVG/Green Drop Down copy - edited.svg"); }
     #mobile-menu ul li a .razer-arrow-icon {
       height: 18px;
       width: 18px;
+      opacity: 0.7;
       transform: rotate(-90deg); }
   #mobile-menu ul li button {
     margin-top: 20px; }
@@ -162,13 +165,15 @@ a {
           box-sizing: border-box;
           border-left: 2px solid #0f0f0f;
           border-right: 2px solid #0f0f0f; }
+          .desktop-menu ul li.menu-item ul li:hover > a {
+            color: #00ff00; }
+          .desktop-menu ul li.menu-item ul li:hover img.razer-arrow-icon {
+            content: url("../../images/Desktop/SVG/Green Drop Down copy - edited.svg"); }
           .desktop-menu ul li.menu-item ul li a {
             font-size: 14px;
             padding-top: 15px;
             padding-bottom: 15px;
             padding-right: 20px; }
-            .desktop-menu ul li.menu-item ul li a:hover {
-              color: #00ff00; }
             .desktop-menu ul li.menu-item ul li a span {
               margin-right: 0; }
             .desktop-menu ul li.menu-item ul li a .razer-arrow-icon {
