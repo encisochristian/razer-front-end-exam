@@ -40,6 +40,7 @@ a {
 .desktop-menu ul {
   height: 60px; }
   .desktop-menu ul li.menu-item {
+    cursor: pointer;
     display: none; }
 
 #mobile-menu {
@@ -56,7 +57,11 @@ a {
     text-transform: uppercase; }
     #mobile-menu ul li a:hover {
       color: #00ff00; }
-  #mobile-menu ul li:last-child {
+    #mobile-menu ul li a .razer-arrow-icon {
+      height: 18px;
+      width: 18px;
+      transform: rotate(-90deg); }
+  #mobile-menu ul li button {
     margin-top: 20px; }
 
 .logo {
@@ -97,6 +102,7 @@ a {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
+  overflow: scroll;
   cursor: pointer; }
 
 .overlay-header {
@@ -110,23 +116,78 @@ a {
     font-family: "Montserrat-Bold";
     font-size: 18px; }
   .overlay-header .overlay-close {
-    margin: 0;
+    margin-left: auto;
+    margin-bottom: 0;
     font-size: 24px;
     font-weight: bolder; }
+
+#menu-back-icon {
+  margin-right: 10px;
+  height: 16px;
+  width: 16px;
+  transform: rotate(90deg); }
 
 @media (min-width: 992px) {
   .desktop-menu ul {
     height: 72px; }
-    .desktop-menu ul li.menu-item {
-      padding-left: 20px;
-      padding-right: 20px;
-      display: block; }
     .desktop-menu ul li a {
+      display: block;
       font-size: 11px;
+      letter-spacing: 1px;
+      padding-top: 28px;
+      padding-right: 20px;
+      padding-bottom: 28px;
+      padding-left: 20px;
       text-transform: uppercase;
       font-family: "Montserrat-Bold"; }
-    .desktop-menu ul li:nth-last-child(2) {
-      padding-right: 0; }
+      .desktop-menu ul li a span {
+        margin-right: 10px;
+        font-family: "Montserrat-Bold"; }
+      .desktop-menu ul li a .razer-arrow-icon {
+        height: 12px;
+        width: 12px; }
+    .desktop-menu ul li.menu-item {
+      position: relative;
+      display: block; }
+      .desktop-menu ul li.menu-item ul {
+        visibility: hidden;
+        opacity: 0;
+        min-width: 217px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none; }
+        .desktop-menu ul li.menu-item ul li {
+          background-color: #000;
+          box-sizing: border-box;
+          border-left: 2px solid #0f0f0f;
+          border-right: 2px solid #0f0f0f; }
+          .desktop-menu ul li.menu-item ul li a {
+            font-size: 14px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 20px; }
+            .desktop-menu ul li.menu-item ul li a:hover {
+              color: #00ff00; }
+            .desktop-menu ul li.menu-item ul li a span {
+              margin-right: 0; }
+            .desktop-menu ul li.menu-item ul li a .razer-arrow-icon {
+              height: 14px;
+              width: 14px;
+              transform: rotate(-90deg); }
+          .desktop-menu ul li.menu-item ul li ul {
+            margin-top: -53px;
+            left: 100%; }
+          .desktop-menu ul li.menu-item ul li:last-child {
+            border-bottom: 2px solid #0f0f0f; }
+          .desktop-menu ul li.menu-item ul li:first-child {
+            border-top: 2px solid #0f0f0f; }
+      .desktop-menu ul li.menu-item:hover > ul {
+        visibility: visible;
+        opacity: 1;
+        display: block; }
+    .desktop-menu ul li button {
+      margin-left: 20px; }
   .desktop-menu .logo img {
     height: 26px; }
   .desktop-menu .logo a {

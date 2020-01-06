@@ -27,6 +27,8 @@ $razer-font-regular: "Montserrat-Regular";
 $razer-font-bold: "Montserrat-Bold";
 $razer-font-light: "Montserrat-Light";
 
+$razer-dropdown-border: 2px solid $color-darker;
+
 * {
   font-family: $razer-font-regular;
   box-sizing: border-box;
@@ -61,6 +63,7 @@ a {
     height: 60px;
     li {
       &.menu-item {
+        cursor: pointer;
         display: none;
       }
     }
@@ -85,8 +88,13 @@ a {
         &:hover {
           color: $color-green;
         }
+        .razer-arrow-icon {
+          height: 18px;
+          width: 18px;
+          transform: rotate(-90deg);
+        }
       }
-      &:last-child {
+      button {
         margin-top: 20px;
       }
     }
@@ -137,6 +145,7 @@ a {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
+  overflow: scroll;
   cursor: pointer;
 }
 
@@ -152,10 +161,32 @@ a {
     font-size: 18px;
   }
   .overlay-close {
-    margin: 0;
+    margin-left: auto;
+    margin-bottom: 0;
     font-size: 24px;
     font-weight: bolder;
   }
+}
+
+// .razer-arrow-right {
+//   margin: -18px;
+//   height: 60px;
+//   width: 60px;
+//   transform: rotate(-90deg);
+// }
+
+// .razer-arrow-left {
+//   margin: -18px -10px -18px -25px;
+//   height: 58px;
+//   width: 58px;
+//   transform: rotate(90deg);
+// }
+
+#menu-back-icon {
+  margin-right: 10px;
+  height: 16px;
+  width: 16px;
+  transform: rotate(90deg);
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -172,18 +203,79 @@ a {
     ul {
       height: 72px;
       li {
-        &.menu-item {
-          padding-left: 20px;
-          padding-right: 20px;
-          display: block;
-        }
         a {
+          display: block;
           font-size: 11px;
+          letter-spacing: 1px;
+          padding-top: 28px;
+          padding-right: 20px;
+          padding-bottom: 28px;
+          padding-left: 20px;
           text-transform: uppercase;
           font-family: $razer-font-bold;
+          span {
+            margin-right: 10px;
+            font-family: $razer-font-bold;
+          }
+          .razer-arrow-icon {
+            height: 12px;
+            width: 12px;
+          }
         }
-        &:nth-last-child(2) {
-          padding-right: 0;
+        &.menu-item {
+          position: relative;
+          display: block;
+          ul {
+            visibility: hidden;
+            opacity: 0;
+            min-width: 217px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            li {
+              background-color: #000;
+              box-sizing: border-box;
+              border-left: $razer-dropdown-border;
+              border-right: $razer-dropdown-border;
+              a {
+                font-size: 14px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-right: 20px;
+                &:hover {
+                  color: $color-green;
+                }
+                span {
+                  margin-right: 0;
+                }
+                .razer-arrow-icon {
+                  height: 14px;
+                  width: 14px;
+                  transform: rotate(-90deg);
+                }
+              }
+              ul {
+                // top: 0;
+                margin-top: -53px;
+                left: 100%;
+              }
+              &:last-child {
+                border-bottom: $razer-dropdown-border;
+              }
+              &:first-child {
+                border-top: $razer-dropdown-border;
+              }
+            }
+          }
+          &:hover > ul {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+          }
+        }
+        button {
+          margin-left: 20px;
         }
       }
     }

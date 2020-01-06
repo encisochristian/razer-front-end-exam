@@ -23,27 +23,84 @@
   <body>
     <nav>
       <div class="desktop-menu container">
-        <ul class="d-flex flex-wrap justify-content-end align-items-center">
+        <ul
+          id="main-menu"
+          class="d-flex flex-wrap justify-content-end align-items-center"
+        >
           <li class="logo">
             <img src="assets/images/Desktop/SVG/wordmark.svg" />
           </li>
-          <li class="menu-item" onclick="changeOverlayMenuTitle('Products')">
-            <a href="#">Products</a>
-          </li>
-          <li class="menu-item" onclick="changeOverlayMenuTitle('About')">
-            <a href="#">About</a>
-          </li>
-          <li class="menu-item" onclick="changeOverlayMenuTitle('Community')">
-            <a href="#">Community</a>
-          </li>
-          <li class="menu-item" onclick="changeOverlayMenuTitle('Contact Us')">
-            <a href="#">Contact Us</a>
+          <li class="menu-item">
+            <a
+              href="#"
+              class="d-flex justify-content-between align-items-center"
+              onclick="renderMobileProductsMenu()"
+            >
+              <span>Products</span>
+              <img
+                class="razer-arrow-icon"
+                src="assets/images/Desktop/SVG/Gray Drop Down - edited.svg"
+              />
+            </a>
+            <ul id="products-menu">
+              <li class="menu-item">
+                <a href="#" onclick="renderMobileProductsMenu()">Laptops</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" onclick="renderMobileProductsMenu()">Mobiles</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" onclick="renderMobileProductsMenu()"
+                  >Mouses & Mats</a
+                >
+              </li>
+              <li class="menu-item">
+                <a href="#" onclick="renderMobileProductsMenu()">Keyboards</a>
+              </li>
+              <li class="menu-item">
+                <a
+                  href="#"
+                  class="d-flex justify-content-between align-items-center"
+                  onclick="renderMobileHeadsetAndAudioMenu()"
+                >
+                  <span>Headset & Audio</span>
+                  <img
+                    class="razer-arrow-icon"
+                    src="assets/images/Desktop/SVG/Gray Drop Down - edited.svg"
+                  />
+                </a>
+                <ul id="headset-and-audio-menu">
+                  <li class="menu-item">
+                    <a href="#" onclick="renderMobileHeadsetAndAudioMenu()"
+                      >Wireless</a
+                    >
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" onclick="renderMobileHeadsetAndAudioMenu()"
+                      >Wired</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="#">Console</a>
+              </li>
+            </ul>
           </li>
           <li class="menu-item">
-            <button class="cta-button">Buy Now</button>
+            <a href="#" onclick="renderMobileMainMenu()">About</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" onclick="renderMobileMainMenu()">Community</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" onclick="renderMobileMainMenu()">Contact Us</a>
+          </li>
+          <li class="menu-item">
+            <button id="cta-button" class="cta-button">Buy Now</button>
           </li>
           <li class="toggle d-lg-none" onclick="toggleOverlayMenu(1)">
-            <img src="assets/images/Mobile/1.png" alt="Menu" />
+            <img src="assets/images/Mobile/1.png" />
           </li>
         </ul>
       </div>
@@ -53,18 +110,24 @@
       <div
         class="overlay-header container d-flex justify-content-between align-items-center"
       >
-        <p class="overlay-title">Menu</p>
+        <div class="d-flex align-items-center" onclick="goBack()">
+          <img
+            id="menu-back-icon"
+            src="assets/images/Desktop/SVG/Gray Drop Down - edited.svg"
+            style="display: none;"
+          />
+          <p class="overlay-title">Menu</p>
+        </div>
         <p class="overlay-close" onclick="toggleOverlayMenu(0)">&#10006;</p>
       </div>
+
       <div class="overlay-content container">
-        <ul class="d-flex flex-wrap align-items-center">
-          <!-- This will be populated when the page loads -->
-        </ul>
+        <!-- This will be populated on page load -->
       </div>
     </div>
 
     <main>
-      <a href="#">Just a link</a>
+      <a class="sample" href="#">Just a link</a>
     </main>
 
     <script src="assets/js/main.js"></script>
