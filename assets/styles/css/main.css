@@ -147,7 +147,7 @@ a {
   font-size: 14px; }
 
 .razer-divider {
-  border: 1px solid #978e8e;
+  border: 0.5px solid #978e8e;
   margin-top: 16px;
   margin-bottom: 16px; }
 
@@ -279,6 +279,26 @@ a {
 #fullscreen-product-image .overlay-content {
   padding-bottom: 60px; }
 
+#thx-spatial-audio-section {
+  padding-top: 62px;
+  padding-bottom: 54px;
+  background-image: url("../../images/Desktop/JPG/razer-nari-usp02-desktop-wireless-gaming-headset.jpg");
+  background-repeat: no-repeat;
+  background-position: center top; }
+  #thx-spatial-audio-section #thx-content {
+    max-width: 401px;
+    padding-left: 22px;
+    padding-right: 20px; }
+    #thx-spatial-audio-section #thx-content .razer-text-content {
+      padding-top: 16px;
+      padding-bottom: 0;
+      font-size: 16px;
+      line-height: 24px; }
+    #thx-spatial-audio-section #thx-content img {
+      display: none;
+      height: 142px;
+      width: 142px; }
+
 @media (min-width: 576px) {
   .container {
     padding-right: 15px;
@@ -306,7 +326,21 @@ a {
   #product-images-section {
     padding-bottom: 54px; }
     #product-images-section .swiper-container {
-      padding-bottom: 67px; } }
+      padding-bottom: 67px; }
+
+  #thx-spatial-audio-section {
+    padding-top: 110px;
+    padding-bottom: 110px; }
+    #thx-spatial-audio-section #thx-content {
+      padding-left: 0;
+      padding-right: 0; }
+      #thx-spatial-audio-section #thx-content .razer-text-content {
+        padding-top: 20px;
+        padding-bottom: 14px;
+        font-size: 20px;
+        line-height: 30px; }
+      #thx-spatial-audio-section #thx-content img {
+        display: block; } }
 @media (min-width: 992px) {
   .desktop-menu ul {
     height: 72px; }
