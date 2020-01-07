@@ -54,6 +54,11 @@ a {
   }
 }
 
+.container {
+  padding-right: 27px;
+  padding-left: 27px;
+}
+
 .toggle {
   cursor: pointer;
 }
@@ -120,7 +125,8 @@ a {
   border: none;
   border-radius: 20px;
   height: 42px;
-  padding: 0px 45px;
+  padding-left: 45px;
+  padding-right: 45px;
   cursor: pointer;
   box-shadow: 8px 8px 16px 0px rgba(64, 69, 73, 0.1);
   letter-spacing: 0.5px;
@@ -179,8 +185,235 @@ a {
   transform: rotate(90deg);
 }
 
+.razer-section-title {
+  color: $color-green;
+  text-transform: uppercase;
+  font-family: $razer-font-bold;
+  font-size: 24px;
+}
+.razer-text-content {
+  color: $color-grey;
+  font-family: $razer-font-light;
+  font-size: 14px;
+}
+
+.razer-divider {
+  border: 1px solid $color-grey;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+// Body Sections
+#supreme-wireless-immersion-section {
+  background-image: linear-gradient(to bottom, $color-darker, rgba(0, 0, 0, 0)),
+    url("../../images/Desktop/JPG/razer-nari-hero-desktop-wireless-gaming-headset CL.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: normal;
+  .razer-section-title,
+  .razer-text-content {
+    max-width: 585px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .razer-section-title {
+    padding-top: 28px;
+    color: #fff;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .razer-text-content {
+    line-height: 20px;
+  }
+
+  #three-logos {
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 72px;
+    img {
+      height: 72px;
+    }
+    img:first-child {
+      margin-right: 12px;
+    }
+    img:nth-child(3) {
+      height: 160px;
+      margin-left: auto;
+      margin-right: -40px;
+    }
+  }
+}
+
+#complemented-by-comfort-section {
+  padding-top: 45px;
+  padding-bottom: 0;
+  background-color: $color-darker;
+  div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .razer-section-header {
+    text-align: center;
+    max-width: 650px;
+    margin-bottom: 32px;
+    .razer-section-title {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    .razer-text-content {
+      font-size: 16px;
+      line-height: 24px;
+      padding-top: 16px;
+      margin: 0;
+    }
+  }
+  .razer-features-list {
+    display: flex;
+    flex-flow: row wrap;
+    .razer-feature {
+      flex-basis: 100%;
+      padding-left: 27px;
+      padding-right: 27px;
+      padding-bottom: 18px;
+      img {
+        height: 38px;
+        margin-bottom: 8px;
+      }
+      h5 {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        color: white;
+        text-transform: uppercase;
+        font-family: $razer-font-bold;
+      }
+      p {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        line-height: 17px;
+        color: #747474;
+        font-family: $razer-font-light;
+      }
+    }
+  }
+  .razer-divider {
+    display: none;
+  }
+}
+#product-images-section {
+  padding-top: 45px;
+  padding-bottom: 24px;
+  background-color: $color-darker;
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .products-header {
+    text-align: center;
+  }
+
+  .swiper-container {
+    padding-top: 34px;
+    padding-right: 20px;
+    padding-bottom: 52px;
+    padding-left: 20px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    .view-fullscreen-button {
+      position: absolute;
+      @extend %razer-button;
+      padding-left: 28px;
+      padding-right: 28px;
+      display: none;
+      z-index: 1060;
+    }
+    &:hover {
+      .view-fullscreen-button {
+        display: block;
+      }
+      img {
+        opacity: 0.24;
+      }
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background: $color-grey;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background: $color-green;
+    box-shadow: 0px 0px 0px 1px $color-green;
+    border: 1px solid;
+    border-radius: 100%;
+    padding: 2px;
+  }
+  .swiper-pagination {
+    margin: 10px 0px 0px 0px;
+    bottom: 0;
+  }
+}
+
+#fullscreen-product-image {
+  &.overlay {
+    background-color: rgba($color: #000, $alpha: 0.9);
+  }
+  .overlay-header {
+    margin-bottom: 0;
+  }
+  .overlay-content {
+    padding-bottom: 60px;
+  }
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  #complemented-by-comfort-section {
+    padding-top: 70px;
+    .razer-section-header {
+      .razer-text-content {
+        line-height: 30px;
+      }
+    }
+    .razer-features-list {
+      .razer-feature {
+        flex-basis: 50%;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        h5 {
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+        p {
+          font-size: 14px;
+          letter-spacing: 1px;
+          color: #747474;
+        }
+      }
+    }
+    .razer-divider {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  #product-images-section {
+    padding-bottom: 54px;
+    .swiper-container {
+      padding-bottom: 67px;
+    }
+  }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -223,6 +456,7 @@ a {
             top: 100%;
             left: 0;
             display: none;
+            z-index: 1000;
             li {
               background-color: #000;
               box-sizing: border-box;
@@ -287,6 +521,49 @@ a {
       height: 42px;
       border-radius: 20px;
       font-size: 11px;
+    }
+  }
+
+  // Body Sections
+  #supreme-wireless-immersion-section {
+    background-image: url("../../images/Desktop/JPG/razer-nari-hero-desktop-wireless-gaming-headset CL.jpg");
+    .razer-section-title,
+    .razer-text-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .razer-section-title {
+      padding-top: 128px;
+      margin-bottom: 18px;
+      font-size: 48px;
+      line-height: 60px;
+    }
+    .razer-text-content {
+      line-height: 24px;
+      font-size: 16px;
+    }
+
+    #three-logos {
+      padding-top: 16px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 20px;
+      img {
+        height: 92px;
+      }
+      img:first-child {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  #complemented-by-comfort-section {
+    .razer-features-list {
+      padding-left: 18px;
+      padding-right: 18px;
+      .razer-feature {
+        flex-basis: calc(100% / 3);
+      }
     }
   }
 }

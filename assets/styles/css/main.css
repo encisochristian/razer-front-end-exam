@@ -34,6 +34,10 @@ a {
     color: #978e8e;
     text-decoration: none; }
 
+.container {
+  padding-right: 27px;
+  padding-left: 27px; }
+
 .toggle {
   cursor: pointer; }
 
@@ -74,12 +78,13 @@ a {
   .logo a {
     font-size: 20px; }
 
-.cta-button {
+.cta-button, #product-images-section .swiper-slide .view-fullscreen-button {
   background-color: #00ff00;
   border: none;
   border-radius: 20px;
   height: 42px;
-  padding: 0px 45px;
+  padding-left: 45px;
+  padding-right: 45px;
   cursor: pointer;
   box-shadow: 8px 8px 16px 0px rgba(64, 69, 73, 0.1);
   letter-spacing: 0.5px;
@@ -130,6 +135,178 @@ a {
   width: 16px;
   transform: rotate(90deg); }
 
+.razer-section-title {
+  color: #00ff00;
+  text-transform: uppercase;
+  font-family: "Montserrat-Bold";
+  font-size: 24px; }
+
+.razer-text-content {
+  color: #978e8e;
+  font-family: "Montserrat-Light";
+  font-size: 14px; }
+
+.razer-divider {
+  border: 1px solid #978e8e;
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+#supreme-wireless-immersion-section {
+  background-image: linear-gradient(to bottom, #0f0f0f, rgba(0, 0, 0, 0)), url("../../images/Desktop/JPG/razer-nari-hero-desktop-wireless-gaming-headset CL.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: normal; }
+  #supreme-wireless-immersion-section .razer-section-title,
+  #supreme-wireless-immersion-section .razer-text-content {
+    max-width: 585px;
+    padding-left: 12px;
+    padding-right: 12px; }
+  #supreme-wireless-immersion-section .razer-section-title {
+    padding-top: 28px;
+    color: #fff;
+    font-size: 40px;
+    line-height: 48px; }
+  #supreme-wireless-immersion-section .razer-text-content {
+    line-height: 20px; }
+  #supreme-wireless-immersion-section #three-logos {
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 72px; }
+    #supreme-wireless-immersion-section #three-logos img {
+      height: 72px; }
+    #supreme-wireless-immersion-section #three-logos img:first-child {
+      margin-right: 12px; }
+    #supreme-wireless-immersion-section #three-logos img:nth-child(3) {
+      height: 160px;
+      margin-left: auto;
+      margin-right: -40px; }
+
+#complemented-by-comfort-section {
+  padding-top: 45px;
+  padding-bottom: 0;
+  background-color: #0f0f0f; }
+  #complemented-by-comfort-section div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  #complemented-by-comfort-section .razer-section-header {
+    text-align: center;
+    max-width: 650px;
+    margin-bottom: 32px; }
+    #complemented-by-comfort-section .razer-section-header .razer-section-title {
+      padding-left: 36px;
+      padding-right: 36px; }
+    #complemented-by-comfort-section .razer-section-header .razer-text-content {
+      font-size: 16px;
+      line-height: 24px;
+      padding-top: 16px;
+      margin: 0; }
+  #complemented-by-comfort-section .razer-features-list {
+    display: flex;
+    flex-flow: row wrap; }
+    #complemented-by-comfort-section .razer-features-list .razer-feature {
+      flex-basis: 100%;
+      padding-left: 27px;
+      padding-right: 27px;
+      padding-bottom: 18px; }
+      #complemented-by-comfort-section .razer-features-list .razer-feature img {
+        height: 38px;
+        margin-bottom: 8px; }
+      #complemented-by-comfort-section .razer-features-list .razer-feature h5 {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        color: white;
+        text-transform: uppercase;
+        font-family: "Montserrat-Bold"; }
+      #complemented-by-comfort-section .razer-features-list .razer-feature p {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        line-height: 17px;
+        color: #747474;
+        font-family: "Montserrat-Light"; }
+  #complemented-by-comfort-section .razer-divider {
+    display: none; }
+
+#product-images-section {
+  padding-top: 45px;
+  padding-bottom: 24px;
+  background-color: #0f0f0f; }
+  #product-images-section .container {
+    padding-left: 0;
+    padding-right: 0; }
+  #product-images-section .products-header {
+    text-align: center; }
+  #product-images-section .swiper-container {
+    padding-top: 34px;
+    padding-right: 20px;
+    padding-bottom: 52px;
+    padding-left: 20px; }
+  #product-images-section .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer; }
+    #product-images-section .swiper-slide .view-fullscreen-button {
+      position: absolute;
+      padding-left: 28px;
+      padding-right: 28px;
+      display: none;
+      z-index: 1060; }
+    #product-images-section .swiper-slide:hover .view-fullscreen-button {
+      display: block; }
+    #product-images-section .swiper-slide:hover img {
+      opacity: 0.24; }
+  #product-images-section .swiper-pagination-bullet {
+    background: #978e8e;
+    opacity: 1; }
+  #product-images-section .swiper-pagination-bullet-active {
+    background: #00ff00;
+    box-shadow: 0px 0px 0px 1px #00ff00;
+    border: 1px solid;
+    border-radius: 100%;
+    padding: 2px; }
+  #product-images-section .swiper-pagination {
+    margin: 10px 0px 0px 0px;
+    bottom: 0; }
+
+#fullscreen-product-image.overlay {
+  background-color: rgba(0, 0, 0, 0.9); }
+#fullscreen-product-image .overlay-header {
+  margin-bottom: 0; }
+#fullscreen-product-image .overlay-content {
+  padding-bottom: 60px; }
+
+@media (min-width: 576px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px; }
+
+  #complemented-by-comfort-section {
+    padding-top: 70px; }
+    #complemented-by-comfort-section .razer-section-header .razer-text-content {
+      line-height: 30px; }
+    #complemented-by-comfort-section .razer-features-list .razer-feature {
+      flex-basis: 50%;
+      padding-top: 27px;
+      padding-bottom: 27px; }
+      #complemented-by-comfort-section .razer-features-list .razer-feature h5 {
+        font-size: 14px;
+        letter-spacing: 1px; }
+      #complemented-by-comfort-section .razer-features-list .razer-feature p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #747474; }
+    #complemented-by-comfort-section .razer-divider {
+      width: 100%;
+      display: block; }
+
+  #product-images-section {
+    padding-bottom: 54px; }
+    #product-images-section .swiper-container {
+      padding-bottom: 67px; } }
 @media (min-width: 992px) {
   .desktop-menu ul {
     height: 72px; }
@@ -159,7 +336,8 @@ a {
         position: absolute;
         top: 100%;
         left: 0;
-        display: none; }
+        display: none;
+        z-index: 1000; }
         .desktop-menu ul li.menu-item ul li {
           background-color: #000;
           box-sizing: border-box;
@@ -201,6 +379,36 @@ a {
     width: auto;
     height: 42px;
     border-radius: 20px;
-    font-size: 11px; } }
+    font-size: 11px; }
+
+  #supreme-wireless-immersion-section {
+    background-image: url("../../images/Desktop/JPG/razer-nari-hero-desktop-wireless-gaming-headset CL.jpg"); }
+    #supreme-wireless-immersion-section .razer-section-title,
+    #supreme-wireless-immersion-section .razer-text-content {
+      padding-left: 0;
+      padding-right: 0; }
+    #supreme-wireless-immersion-section .razer-section-title {
+      padding-top: 128px;
+      margin-bottom: 18px;
+      font-size: 48px;
+      line-height: 60px; }
+    #supreme-wireless-immersion-section .razer-text-content {
+      line-height: 24px;
+      font-size: 16px; }
+    #supreme-wireless-immersion-section #three-logos {
+      padding-top: 16px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 20px; }
+      #supreme-wireless-immersion-section #three-logos img {
+        height: 92px; }
+      #supreme-wireless-immersion-section #three-logos img:first-child {
+        margin-right: 12px; }
+
+  #complemented-by-comfort-section .razer-features-list {
+    padding-left: 18px;
+    padding-right: 18px; }
+    #complemented-by-comfort-section .razer-features-list .razer-feature {
+      flex-basis: calc(100% / 3); } }
 
 /*# sourceMappingURL=main.css.map */

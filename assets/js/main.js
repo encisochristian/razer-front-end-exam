@@ -12,11 +12,13 @@ var ctaButton = document.querySelector(
 var mobileMenuContainer = document.querySelector(
   "#mobile-menu .overlay-content"
 );
+var imageModal = document.getElementById("fullscreen-product-image");
 var clonedMainMenuItems = [];
 var clonedProductsMenuItems = [];
 var clonedHeadsetAndAudioMenuItems = [];
 var depth = 0;
 var activeMobileMenu;
+let swiper;
 
 function renderMobileMainMenu() {
   if (activeMobileMenu == "main-menu") return;
@@ -102,6 +104,171 @@ function goBack() {
   }
 }
 
+// Product images slider
+
+// render products slides on page load
+var productImagesSlides = [
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-05-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-05-wireless-gaming-headset.jpg"
+  },
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-06-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-06-wireless-gaming-headset.jpg"
+  },
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-07-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-07-wireless-gaming-headset.jpg"
+  },
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-08-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-08-wireless-gaming-headset.jpg"
+  },
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-01-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-01-wireless-gaming-headset.jpg"
+  },
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-02-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-02-wireless-gaming-headset.jpg"
+  },
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-03-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-03-wireless-gaming-headset.jpg"
+  },
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-04-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-04-wireless-gaming-headset.jpg"
+  },
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-07-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-07-wireless-gaming-headset.jpg"
+  },
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-01-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-01-wireless-gaming-headset.jpg"
+  },
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-06-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-06-wireless-gaming-headset.jpg"
+  },
+  {
+    smallImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-04-wireless-gaming-headset xs.jpg",
+    largeImage:
+      "assets/images/Desktop/JPG/razer-nari-gallery-04-wireless-gaming-headset.jpg"
+  }
+];
+
+function renderProductImgesSlides() {
+  var slidesWrapper = document.querySelector(".swiper-wrapper");
+  productImagesSlides.forEach((slideInfo, idx) => {
+    slidesWrapper.appendChild(createProductImageSlide(slideInfo, idx));
+  });
+
+  function createProductImageSlide(slideInfo, idx) {
+    var div = document.createElement("div");
+    div.className = "swiper-slide";
+    // div.setAttribute("onclick", "openFullScreenImage(" + idx + ")");
+    var button = document.createElement("button");
+    button.className = "view-fullscreen-button";
+    button.innerHTML = "View Fullscreen";
+    button.setAttribute("onclick", "openFullScreenImage(" + idx + ")");
+    var img = new Image();
+    img.src = slideInfo.smallImage;
+
+    div.appendChild(button);
+    div.appendChild(img);
+
+    return div;
+  }
+  swiper = new Swiper(".swiper-container", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    slidesPerGroup: 4,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 20
+      },
+      576: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 20
+      },
+      992: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 30
+      },
+      1200: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 30
+      }
+    }
+  });
+}
+
+function openFullScreenImage(slideIdx) {
+  var currentImage = imageModal.querySelector("img");
+  if (currentImage != null) {
+    currentImage.remove();
+  }
+  var imageContainer = document.querySelector(
+    "#fullscreen-product-image .overlay-content"
+  );
+  var img = new Image();
+  productImagesSlides.forEach((slideItem, idx) => {
+    if (slideIdx != idx) return;
+    img.src = slideItem.largeImage;
+    img.className = "img-fluid";
+  });
+
+  imageContainer.appendChild(img);
+  togglImageModal(1);
+}
+
+function togglImageModal(state) {
+  if (state) {
+    imageModal.style.display = "block";
+  } else {
+    imageModal.style.display = "none";
+  }
+}
+
 function init() {
   cloneDesktopMenuItems(mainMenuItems, clonedMainMenuItems);
   cloneDesktopMenuItems(productsMenuItems, clonedProductsMenuItems);
@@ -110,6 +277,7 @@ function init() {
     clonedHeadsetAndAudioMenuItems
   );
   renderMobileMainMenu();
+  renderProductImgesSlides();
 }
 
 window.addEventListener("load", init());

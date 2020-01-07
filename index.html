@@ -7,18 +7,13 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <!-- Bootstrap CSS -->
+    <title>Razer Front-End Exam</title>
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
     />
-
+    <link rel="stylesheet" href="assets/vendor/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="assets/styles/css/main.css" />
-
-    <title>Razer Front-End Exam</title>
   </head>
   <body>
     <nav>
@@ -127,24 +122,157 @@
     </div>
 
     <main>
-      <a class="sample" href="#">Just a link</a>
-    </main>
+      <section id="supreme-wireless-immersion-section">
+        <div class="container">
+          <h3 class="razer-section-title">Supreme Wireless Immersion</h3>
+          <p class="razer-text-content">
+            When it comes to gaming immersion, sound plays a critical role. It
+            engages your sense of hearing to determine the atmosphere and mood,
+            creating a lifelike experience that lets you truly embody your game
+            character. Standing by this philosophy, we’ve built a headset with
+            THX Spatial Audio to bring you 360° positional sound, giving you
+            greater spatial awareness. We’ve also added ergonomic design
+            features to make this one of the most comfortable daily drivers for
+            gaming. This is the Razer Nari.
+          </p>
+          <div
+            id="three-logos"
+            class="d-flex justify-content-start align-items-start"
+          >
+            <img
+              src="assets/images/Desktop/PNG/razer-nari-thx-logo.png"
+              alt="razer-nari-thx-logo"
+            />
+            <img
+              src="assets/images/Desktop/PNG/razer-nari-chroma-logo.png"
+              alt="razer-nari-chroma-logo"
+            />
+            <img
+              class="d-none d-lg-block"
+              src="assets/images/Desktop/SVG/razer-nari-logo.svg"
+              alt="razer-nari-logo"
+            />
+          </div>
+        </div>
+      </section>
 
+      <section id="complemented-by-comfort-section">
+        <div class="container">
+          <div class="razer-section-header">
+            <h3 class="razer-section-title">Complemented by Comfort</h3>
+            <p class="razer-text-content">
+              The Razer Nari is designed so that its immersive technology is
+              complemented by comfortable features, letting you escape into game
+              worlds for hours without strain.
+            </p>
+          </div>
+          <div class="razer-features-list">
+            <div class="razer-feature">
+              <img
+                src="assets/images/Desktop/SVG/razer-nari-Cooling-Gel-Infused-Cushions-icon.svg"
+                alt="razer-nari-Cooling-Gel-Infused-Cushions-icon"
+              />
+              <h5>Cooling Gel-Infused Cushions</h5>
+              <p>Reduces heat build-up during intense gaming sessions</p>
+            </div>
+            <div class="razer-feature">
+              <img
+                src="assets/images/Desktop/SVG/razer-nari-Auto-Adjusting-Headband-icon.svg"
+                alt="razer-nari-Auto-Adjusting-Headband-icon"
+              />
+              <h5>Auto-Adjusting Headband</h5>
+              <p>
+                Maximum adjustability to fit seamlessly onto any head size
+              </p>
+            </div>
+            <div class="razer-feature">
+              <img
+                src="assets/images/Desktop/SVG/razer-nari-Swiveling-Earcups-icon.svg"
+                alt="razer-nari-Cooling-Gel-Infused-Cushions-icon"
+              />
+              <h5>Swiveling Earcups</h5>
+              <p>Adapting to the shape and position of your ears</p>
+            </div>
+            <div class="razer-feature">
+              <img
+                src="assets/images/Desktop/SVG/razer-nari-Game-Chat-Balance-icon.svg"
+                alt="razer-nari-Cooling-Gel-Infused-Cushions-icon"
+              />
+              <h5>Game/Chat Balance</h5>
+              <p>
+                Fine-tune between game and chat volume for the perfect mix that
+                lets you enjoy immersive sound without interrupting team
+                communication.
+              </p>
+            </div>
+            <div class="razer-feature">
+              <img
+                src="assets/images/Desktop/SVG/razer-nari-Wireless-Audio-icon.svg"
+                alt="razer-nari-Cooling-Gel-Infused-Cushions-icon"
+              />
+              <h5>2.4 Ghz WirelessAudio</h5>
+              <p>
+                Get lag-free, high-fidelity gaming audio with a wireless range
+                of up to 12 meters smoothly without disconnection.
+              </p>
+            </div>
+            <div class="razer-feature">
+              <img
+                src="assets/images/Desktop/SVG/razer-nari-35-mm-Wired-Mode-icon.svg"
+                alt="razer-nari-Cooling-Gel-Infused-Cushions-icon"
+              />
+              <h5>Wired Mode</h5>
+              <p>
+                Get seamless cross-platform compatibility via a 3.5 mm audio
+                jack in wired mode. Enjoy high quality stereo sound whether
+                you’re playing on PC,
+              </p>
+            </div>
+          </div>
+          <div class="razer-divider"></div>
+        </div>
+      </section>
+      <section id="product-images-section">
+        <div class="container">
+          <div class="products-header">
+            <h4 class="razer-section-title">Product Images</h4>
+          </div>
+          <div id="product-images-slider">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <!-- This will be populated on page load -->
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="fullscreen-product-image" class="overlay">
+        <div class="container">
+          <div
+            class="overlay-header d-flex justify-content-end align-items-center"
+          >
+            <p class="overlay-close" onclick="togglImageModal(0)">
+              &#10006;
+            </p>
+          </div>
+          <div class="overlay-content"></div>
+        </div>
+      </div>
+    </main>
+    <script src="assets/vendor/swiper/js/swiper.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
