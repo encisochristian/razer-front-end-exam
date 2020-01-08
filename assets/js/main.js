@@ -301,7 +301,7 @@ var showLessProductsButton = document.getElementById(
 var elementsToToggle = document.querySelectorAll(
   "#other-products-section div.razer-card"
 );
-function onClickViewAllProducts() {
+function viewAllProducts() {
   viewAllProductsButton.style.display = "none";
   showLessProductsButton.style.display = "inline-block";
 
@@ -309,7 +309,7 @@ function onClickViewAllProducts() {
     elementsToToggle[i].style.display = "block";
   }
 }
-function onClickShowLessProducts() {
+function showLessProducts() {
   showLessProductsButton.style.display = "none";
   viewAllProductsButton.style.display = "inline-block";
 
@@ -319,6 +319,15 @@ function onClickShowLessProducts() {
     }
   }
 }
+let minWidth = window.matchMedia("(min-width: 576px)");
+function updateProducts() {
+  if (minWidth.matches) {
+    viewAllProducts();
+  } else {
+    showLessProducts();
+  }
+}
+minWidth.addListener(updateProducts);
 
 function init() {
   cloneDesktopMenuItems(mainMenuItems, clonedMainMenuItems);
