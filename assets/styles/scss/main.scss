@@ -407,7 +407,7 @@ a {
 
 #other-products-section {
   padding-top: 55px;
-  padding-bottom: 55px;
+  padding-bottom: 45px;
   background-color: $color-darker;
   .razer-section-title {
     margin-bottom: 50px;
@@ -483,6 +483,83 @@ a {
   }
 }
 
+#contact-form-section {
+  background-color: #080808;
+  padding-top: 54px;
+  padding-bottom: 34px;
+  .row {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+
+  .razer-section-title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .form {
+    padding-bottom: 54px;
+    .container,
+    .row {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    input,
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background: none;
+      border: 1px solid #bcc6d0;
+      border-radius: 5px;
+      color: #fff;
+      font: {
+        family: $razer-font-light;
+        size: 11px;
+      }
+      &::placeholder {
+        color: #fff;
+      }
+    }
+    textarea {
+      height: 128px;
+    }
+    input[type="submit"] {
+      @extend %razer-button;
+      width: 100%;
+    }
+  }
+
+  .contact-info {
+    h5 {
+      padding-top: 12px;
+      font-size: 16px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: $razer-font-bold;
+    }
+    p {
+      font-size: 15px;
+      line-height: 22px;
+      color: $color-grey;
+      letter-spacing: 1px;
+      font-family: $razer-font-regular;
+    }
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -542,7 +619,7 @@ a {
       padding-left: 0;
       padding-right: 0;
       .razer-text-content {
-        padding-top: 20px;
+        padding-top: 14px;
         padding-bottom: 14px;
         font-size: 20px;
         line-height: 30px;
@@ -573,10 +650,53 @@ a {
       display: block;
     }
   }
+
+  #contact-form-section {
+    padding-top: 74px;
+    padding-bottom: 60px;
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .razer-section-title {
+      text-align: left;
+      margin-bottom: 32px;
+    }
+
+    .form {
+      .container,
+      .row {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      input,
+      textarea {
+        padding: 11px;
+        font: {
+          size: 11px;
+        }
+      }
+      textarea {
+        height: 100px;
+      }
+      input[type="submit"] {
+        width: 150px;
+      }
+    }
+  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  #contact-form-section {
+    .form {
+      .two-form-fields {
+        margin-left: -4px;
+        margin-right: -4px;
+      }
+    }
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -723,6 +843,16 @@ a {
       .razer-feature {
         flex-basis: calc(100% / 3);
       }
+    }
+  }
+
+  #contact-form-section {
+    .row {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    .form {
+      padding-bottom: 0;
     }
   }
 }

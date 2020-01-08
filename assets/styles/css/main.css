@@ -78,7 +78,7 @@ a {
   .logo a {
     font-size: 20px; }
 
-.cta-button, #product-images-section .swiper-slide .view-fullscreen-button, #other-products-section #other-products-button button {
+.cta-button, #product-images-section .swiper-slide .view-fullscreen-button, #other-products-section #other-products-button button, #contact-form-section .form input[type="submit"] {
   background-color: #00ff00;
   border: none;
   border-radius: 20px;
@@ -307,7 +307,7 @@ a {
 
 #other-products-section {
   padding-top: 55px;
-  padding-bottom: 55px;
+  padding-bottom: 45px;
   background-color: #0f0f0f; }
   #other-products-section .razer-section-title {
     margin-bottom: 50px;
@@ -363,6 +363,63 @@ a {
     font-family: "Montserrat-Regular";
     font-size: 12px; }
 
+#contact-form-section {
+  background-color: #080808;
+  padding-top: 54px;
+  padding-bottom: 34px; }
+  #contact-form-section .row {
+    padding-left: 27px;
+    padding-right: 27px; }
+  #contact-form-section .razer-section-title {
+    text-align: center;
+    margin-bottom: 24px; }
+  #contact-form-section .form {
+    padding-bottom: 54px; }
+    #contact-form-section .form .container,
+    #contact-form-section .form .row {
+      padding-left: 0;
+      padding-right: 0; }
+    #contact-form-section .form input[type="number"]::-webkit-inner-spin-button,
+    #contact-form-section .form input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+    #contact-form-section .form input[type="number"] {
+      -moz-appearance: textfield; }
+    #contact-form-section .form input,
+    #contact-form-section .form textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background: none;
+      border: 1px solid #bcc6d0;
+      border-radius: 5px;
+      color: #fff;
+      font-family: "Montserrat-Light";
+      font-size: 11px; }
+      #contact-form-section .form input::placeholder,
+      #contact-form-section .form textarea::placeholder {
+        color: #fff; }
+    #contact-form-section .form textarea {
+      height: 128px; }
+    #contact-form-section .form input[type="submit"] {
+      width: 100%; }
+  #contact-form-section .contact-info h5 {
+    padding-top: 12px;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Montserrat-Bold"; }
+  #contact-form-section .contact-info p {
+    font-size: 15px;
+    line-height: 22px;
+    color: #978e8e;
+    letter-spacing: 1px;
+    font-family: "Montserrat-Regular"; }
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -405,7 +462,7 @@ a {
       padding-left: 0;
       padding-right: 0; }
       #thx-spatial-audio-section #thx-content .razer-text-content {
-        padding-top: 20px;
+        padding-top: 14px;
         padding-bottom: 14px;
         font-size: 20px;
         line-height: 30px; }
@@ -426,7 +483,33 @@ a {
     #other-products-section .razer-card {
       padding-right: 10px;
       padding-left: 10px;
-      display: block; } }
+      display: block; }
+
+  #contact-form-section {
+    padding-top: 74px;
+    padding-bottom: 60px; }
+    #contact-form-section .container {
+      padding-left: 0;
+      padding-right: 0; }
+    #contact-form-section .razer-section-title {
+      text-align: left;
+      margin-bottom: 32px; }
+    #contact-form-section .form .container,
+    #contact-form-section .form .row {
+      padding-left: 0;
+      padding-right: 0; }
+    #contact-form-section .form input,
+    #contact-form-section .form textarea {
+      padding: 11px;
+      font-size: 11px; }
+    #contact-form-section .form textarea {
+      height: 100px; }
+    #contact-form-section .form input[type="submit"] {
+      width: 150px; } }
+@media (min-width: 768px) {
+  #contact-form-section .form .two-form-fields {
+    margin-left: -4px;
+    margin-right: -4px; } }
 @media (min-width: 992px) {
   .desktop-menu ul {
     height: 72px; }
@@ -529,6 +612,12 @@ a {
     padding-left: 18px;
     padding-right: 18px; }
     #complemented-by-comfort-section .razer-features-list .razer-feature {
-      flex-basis: calc(100% / 3); } }
+      flex-basis: calc(100% / 3); }
+
+  #contact-form-section .row {
+    padding-left: 80px;
+    padding-right: 80px; }
+  #contact-form-section .form {
+    padding-bottom: 0; } }
 
 /*# sourceMappingURL=main.css.map */
