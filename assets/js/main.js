@@ -269,6 +269,57 @@ function togglImageModal(state) {
   }
 }
 
+// THX Spatial Audio
+var windowHeight;
+var elementToAnimate = document.getElementById("thx-content");
+
+function initThxContent() {
+  window.addEventListener("scroll", animateElement);
+  window.addEventListener("resize", updateWindowHeight);
+
+  updateWindowHeight();
+  animateElement();
+}
+
+function animateElement() {
+  var positionFromTop = elementToAnimate.getBoundingClientRect().top;
+  if (positionFromTop - windowHeight <= 0) {
+    elementToAnimate.classList.add("razer-fade-in");
+    elementToAnimate.classList.remove("razer-hidden");
+  }
+}
+
+function updateWindowHeight() {
+  windowHeight = window.innerHeight;
+}
+
+// Other products section
+var viewAllProductsButton = document.getElementById("view-all-products-button");
+var showLessProductsButton = document.getElementById(
+  "show-less-product-button"
+);
+var elementsToToggle = document.querySelectorAll(
+  "#other-products-section div.razer-card"
+);
+function onClickViewAllProducts() {
+  viewAllProductsButton.style.display = "none";
+  showLessProductsButton.style.display = "inline-block";
+
+  for (var i = 0; i < elementsToToggle.length; i++) {
+    elementsToToggle[i].style.display = "block";
+  }
+}
+function onClickShowLessProducts() {
+  showLessProductsButton.style.display = "none";
+  viewAllProductsButton.style.display = "inline-block";
+
+  for (var i = 0; i < elementsToToggle.length; i++) {
+    if (i > 1) {
+      elementsToToggle[i].style.display = "none";
+    }
+  }
+}
+
 function init() {
   cloneDesktopMenuItems(mainMenuItems, clonedMainMenuItems);
   cloneDesktopMenuItems(productsMenuItems, clonedProductsMenuItems);
@@ -278,6 +329,7 @@ function init() {
   );
   renderMobileMainMenu();
   renderProductImgesSlides();
+  initThxContent();
 }
 
 window.addEventListener("load", init());

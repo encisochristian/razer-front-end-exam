@@ -78,7 +78,7 @@ a {
   .logo a {
     font-size: 20px; }
 
-.cta-button, #product-images-section .swiper-slide .view-fullscreen-button {
+.cta-button, #product-images-section .swiper-slide .view-fullscreen-button, #other-products-section #other-products-button button {
   background-color: #00ff00;
   border: none;
   border-radius: 20px;
@@ -299,6 +299,76 @@ a {
       height: 142px;
       width: 142px; }
 
+.razer-fade-in {
+  animation: fade-in 1.4s; }
+
+.razer-hidden {
+  opacity: 0; }
+
+#other-products-section {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background-color: #0f0f0f; }
+  #other-products-section .razer-section-title {
+    margin-bottom: 50px;
+    text-align: center; }
+  #other-products-section .razer-card {
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-bottom: 32px;
+    display: none; }
+    #other-products-section .razer-card:first-child, #other-products-section .razer-card:first-child + .razer-card {
+      display: block; }
+  #other-products-section #other-products-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center; }
+    #other-products-section #other-products-button button#view-all-products-button {
+      padding-left: 23px;
+      padding-right: 23px; }
+    #other-products-section #other-products-button button#show-less-product-button {
+      display: none; }
+
+.razer-card .razer-card-header-image {
+  position: relative;
+  background-color: #000; }
+  .razer-card .razer-card-header-image img:not(.brand-indicator) {
+    width: 100%; }
+  .razer-card .razer-card-header-image .brand-indicator {
+    position: absolute;
+    right: 20px;
+    bottom: 14px; }
+.razer-card .razer-card-body {
+  border-bottom: 2px solid #00ff00;
+  background-color: #161515;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .razer-card .razer-card-body h5 {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Montserrat-Bold";
+    font-size: 15px;
+    letter-spacing: 1px; }
+  .razer-card .razer-card-body p {
+    color: #978e8e;
+    font-family: "Montserrat-Light";
+    font-size: 12px;
+    line-height: 14px; }
+  .razer-card .razer-card-body a {
+    color: #00ff00;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "Montserrat-Regular";
+    font-size: 12px; }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.7, 0.7); }
+  to {
+    opacity: 1; } }
 @media (min-width: 576px) {
   .container {
     padding-right: 15px;
@@ -340,7 +410,23 @@ a {
         font-size: 20px;
         line-height: 30px; }
       #thx-spatial-audio-section #thx-content img {
-        display: block; } }
+        display: block; }
+
+  #other-products-section {
+    padding-top: 76px;
+    padding-bottom: 76px; }
+    #other-products-section .container {
+      padding-left: 0;
+      padding-right: 0; }
+      #other-products-section .container .row {
+        margin-left: -10px;
+        margin-right: -10px; }
+    #other-products-section #other-products-button {
+      display: none; }
+    #other-products-section .razer-card {
+      padding-right: 10px;
+      padding-left: 10px;
+      display: block; } }
 @media (min-width: 992px) {
   .desktop-menu ul {
     height: 72px; }

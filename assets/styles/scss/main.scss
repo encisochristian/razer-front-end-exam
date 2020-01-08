@@ -397,6 +397,102 @@ a {
   }
 }
 
+.razer-fade-in {
+  animation: fade-in 1.4s;
+}
+
+.razer-hidden {
+  opacity: 0;
+}
+
+#other-products-section {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background-color: $color-darker;
+  .razer-section-title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .razer-card {
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-bottom: 32px;
+    display: none;
+    &:first-child,
+    &:first-child + .razer-card {
+      display: block;
+    }
+  }
+  #other-products-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    button {
+      @extend %razer-button;
+      &#view-all-products-button {
+        padding-left: 23px;
+        padding-right: 23px;
+      }
+      &#show-less-product-button {
+        display: none;
+      }
+    }
+  }
+}
+
+.razer-card {
+  .razer-card-header-image {
+    position: relative;
+    background-color: #000;
+    img:not(.brand-indicator) {
+      width: 100%;
+    }
+    .brand-indicator {
+      position: absolute;
+      right: 20px;
+      bottom: 14px;
+    }
+  }
+  .razer-card-body {
+    border-bottom: 2px solid $color-green;
+    background-color: #161515;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    h5 {
+      color: #fff;
+      text-transform: uppercase;
+      font-family: $razer-font-bold;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+    p {
+      color: $color-grey;
+      font-family: $razer-font-light;
+      font-size: 12px;
+      line-height: 14px;
+    }
+    a {
+      color: $color-green;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: $razer-font-regular;
+      font-size: 12px;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.7, 0.7);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .container {
@@ -454,6 +550,27 @@ a {
       img {
         display: block;
       }
+    }
+  }
+  #other-products-section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      .row {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    }
+    #other-products-button {
+      display: none;
+    }
+
+    .razer-card {
+      padding-right: 10px;
+      padding-left: 10px;
+      display: block;
     }
   }
 }
