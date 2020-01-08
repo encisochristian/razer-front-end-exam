@@ -755,6 +755,16 @@ a {
         width: 150px;
       }
     }
+
+    .contact-info {
+      h5 {
+        font-size: 13px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
   }
 
   #footer {
@@ -775,9 +785,6 @@ a {
             }
           }
         }
-      }
-
-      .social-icons img {
       }
     }
   }

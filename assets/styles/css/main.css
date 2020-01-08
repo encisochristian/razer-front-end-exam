@@ -557,6 +557,11 @@ a {
       height: 100px; }
     #contact-form-section .form input[type="submit"] {
       width: 150px; }
+    #contact-form-section .contact-info h5 {
+      font-size: 13px; }
+    #contact-form-section .contact-info p {
+      font-size: 13px;
+      line-height: 16px; }
 
   #footer .container .row {
     padding-left: 0;
